@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/typeMailUI">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.omaressam.forgetpasswordcomponent.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/typeMailUI"
+        android:name="com.omaressam.forgetpasswordcomponent.TypeMailUI"
+        android:label="TypeMailUI" >
+        <action
+            android:id="@+id/action_typeMailUI_to_verifyMailUI"
+            app:destination="@id/verifyMailUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyMailUI"
+        android:name="com.omaressam.forgetpasswordcomponent.VerifyMailUI"
+        android:label="VerifyMailUI" >
+        <action
+            android:id="@+id/action_verifyMailUI_to_resetPasswordUI"
+            app:destination="@id/resetPasswordUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordUI"
+        android:name="com.omaressam.forgetpasswordcomponent.ResetPasswordUI"
+        android:label="ResetPasswordUI" />
+</navigation>
